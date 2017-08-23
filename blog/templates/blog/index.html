@@ -1,0 +1,35 @@
+{% extends 'blog/base.html' %}
+{% load social_share %}
+<div class="container-fluid">
+    {% block body %}
+        <br><br>
+    {% if object_list %}
+
+            {% for posts in object_list reversed %}
+                <div class="container align-self-center bg-white">
+                    <h3><b><a class="blog-title text-dark" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></b></h3>
+                    {{ posts.publish_date }}<br>
+                    by Tuan Doan
+                    <br><br>
+                    <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}"><br><br></a>
+                        <h5>{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-info">Read</a></h5>
+                    <br>
+                    {% if user.is_authenticated %}
+                        <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
+                        <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
+                    {% else %}
+                            {% post_to_facebook posts %}
+                            {% post_to_twitter "{{ posts.post_title }}" posts %}
+                            {% post_to_gplus posts %}
+                            {% post_to_reddit "nice" posts %}
+                    {% endif %}
+                    <br><br>
+                </div>
+                <br><br>
+            {% endfor %}
+
+    {% else %}
+        <h1>You haven't post anything!</h1>
+    {% endif %}
+    {% endblock %}
+</div>
