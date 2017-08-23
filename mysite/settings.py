@@ -25,7 +25,9 @@ SECRET_KEY = '&yl3==2%2t8q-7e@t@j@99_w5z3j3$2l&85l!4+ef1oy4gzh@&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['teqitez.herokuapp.com']
+ALLOWED_HOSTS = ['teqitez.herokuapp.com',
+                 'git.heroku.com',
+                 ]
 
 
 # Application definition
