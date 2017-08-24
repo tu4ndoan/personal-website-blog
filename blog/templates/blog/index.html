@@ -1,6 +1,7 @@
 {% extends 'blog/base.html' %}
 <div class="container-fluid">
     {% block body %}
+        <!-- facebook plugin for share button -->
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -9,6 +10,7 @@
           js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v2.10&appId=292294567910076";
           fjs.parentNode.insertBefore(js, fjs);
         }(document, 'script', 'facebook-jssdk'));</script>
+        <!-- -->
         <br><br>
     {% if object_list %}
 
@@ -25,8 +27,10 @@
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
                     {% else %}
-                            <a class="btn" href="https://facebook.com/sharer/sharer.php?u='google.com'" >share
-                            </a>
+                        <a class="twitter-share-button"
+                            href="https://twitter.com/intent/tweet?text=Hello%20world"
+                            data-size="large">
+                            Tweet</a>
                         <div class="fb-share-button" data-href="https://teqitez.herokuapp.com/blog" data-layout="button_count" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteqitez.herokuapp.com/blog%2F&amp;src=sdkpreparse">Share</a></div>
                     {% endif %}
                     <br><br>
