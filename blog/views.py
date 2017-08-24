@@ -79,5 +79,6 @@ class LogoutView(View):
 
 
 class LandingPageView(View):
-    template_name="blog/landing.html"
+    def get(self):
+        return redirect('blog:index')
 
