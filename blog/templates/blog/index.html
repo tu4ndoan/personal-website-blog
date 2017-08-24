@@ -1,5 +1,4 @@
 {% extends 'blog/base.html' %}
-{% load social_share %}
 <div class="container-fluid">
     {% block body %}
         <br><br>
@@ -18,10 +17,8 @@
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
                     {% else %}
-                            {% post_to_facebook posts %}
-                            {% post_to_twitter "{{ posts.post_title }}" posts %}
-                            {% post_to_gplus posts %}
-                            {% post_to_reddit "nice" posts %}
+                            <a class="btn" href="https://facebook.com/sharer/sharer.php?u='google.com'" >share
+                            </a>
                     {% endif %}
                     <br><br>
                 </div>
