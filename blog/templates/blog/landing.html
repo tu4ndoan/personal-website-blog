@@ -1,5 +1,30 @@
-{% extends 'blog/base.html' %}
-{% block body %}
-    <h1 class="text-light text-center align-self-center">Welcome to teqitez</h1>
-    <a href="{% url 'blog:index' %}" class="btn btn-primary">blog</a>
-{% endblock %}
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title> teqitez </title>
+        {% load staticfiles %}
+
+        <link rel="stylesheet" href="{% static 'blog/bootstrap.min.css' %}">
+        <script src="{% static 'blog/jquery-3.2.1.slim.min.js' %}"></script>
+        <script src="{% static 'blog/bootstrap.min.js' %}"></script>
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
+        <link rel='stylesheet' type="text/css" href="{% static 'blog/style.css' %}" />
+
+        <link rel="shortcut icon" type="image/png" href="{% static 'blog/images/favicon.ico'%}"/>
+
+    </head>
+
+    <body>
+        <div class="align-middle text-center landingtext" >
+            <h1 class="text-light text-center align-self-center">Welcome to teqitez</h1>
+            <a href="{% url 'blog:index' %}" class="btn btn-primary">visit blog</a>
+        </div>
+
+    </body>
+    <footer>Copyright &copy; Tuan Doan, all rights served</footer>
+</html>
+

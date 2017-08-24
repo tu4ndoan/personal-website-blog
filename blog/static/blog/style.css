@@ -6,3 +6,7 @@ body {
 footer {
     display: block;
 }
+
+.landingtext {
+    padding: 30%;
+}

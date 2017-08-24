@@ -19,8 +19,8 @@
         <meta property="og:title"         content="Your Website Title" />
         <meta property="og:description"   content="Your description" />
 
-        <link rel="shortcut icon" type="image/png" href="{% static 'blog/images/favicon.png'%}"/>
-        <link rel="shortcut icon" type="image/png" href="http://eg.com/favicon.png"/>
+        <link rel="shortcut icon" type="image/png" href="{% static 'blog/images/favicon.ico'%}"/>
+
 
     </head>
 
@@ -28,13 +28,15 @@
         <div class="container-fluid">
             <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
                     <a class="navbar-brand" href="{% url 'blog:index' %}">teqitez</a>
+                <div class="nav navbar-nav navbar-right">
                     {% if user.is_authenticated %}
                         <a class="btn btn-dark float-right" href="{% url 'blog:post-add' %}">Write</a>
                         <a class="btn btn-light" href="{% url 'blog:logout' %}">Logout</a>
                     {% else %}
-                        <a class="btn btn-light" href="{% url 'blog:login' %}">Log In</a>
+                        <span class="navbar-text text-success">Not logged in</span>
                     {% endif %}
-            </nav>
+                </div>
+            </div>
         </div>
         {% block body %}
         {% endblock %}
