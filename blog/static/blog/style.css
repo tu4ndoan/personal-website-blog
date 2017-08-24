@@ -1,6 +1,4 @@
 body {
-    background: white url("images/bg.png") no-repeat fixed ;
-    width: 1200px;
-    height: 100%;
+    background: white url("images/01_bg.png") no-repeat fixed center ;
     font-family: 'Ubuntu', cursive;
 }
