@@ -2,3 +2,4 @@ Django==1.11.4
 gunicorn==19.7.1
 whitenoise==3.3.0
 psycopg2
+Pillow
