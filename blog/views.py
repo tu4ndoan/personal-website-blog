@@ -71,7 +71,7 @@ def add_comment_to_post(request, pk):
             comment = form.save(commit=False)
             comment.post = post
             comment.save()
-            return redirect('post_detail', {'pk':pk})
+            return redirect('post_detail', pk=pk)
     else:
         form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
@@ -79,13 +79,13 @@ def add_comment_to_post(request, pk):
 
 @login_required
 def comment_approve(request, pk):
-    comment = get_object_or_404(Comment, {'pk':pk})
+    comment = get_object_or_404(Comment, pk=pk)
     comment.approve()
-    return redirect('post_detail', {'pk':pk})
+    return redirect('post_detail', pk=pk)
 
 
 @login_required
 def comment_remove(request, pk):
-    comment = get_object_or_404(Comment, {'pk':pk})
+    comment = get_object_or_404(Comment, pk=pk)
     comment.delete()
-    return redirect('post_detail', {'pk':pk})
+    return redirect('post_detail', pk=pk)
