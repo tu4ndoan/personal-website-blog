@@ -27,7 +27,7 @@
                             </div>
                         </div>
                         <div>
-                            <a href="{% url 'blog:detail' pk=posts.pk %}">Comments: {{ posts.approved_comments.count }}</a>
+                            <a href="{% url 'blog:detail' pk=posts.id %}">Comments: {{ posts.approved_comments.count }}</a>
                         </div>
                     {% endif %}
                     <br><br>
