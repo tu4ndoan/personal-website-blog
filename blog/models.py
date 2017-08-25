@@ -24,7 +24,8 @@ class Comment(models.Model):
     post = models.ForeignKey(BlogPost, related_name='comments')
     name = models.CharField(max_length=80)
     text = models.TextField()
-    created = models.DateTimeField(auto_now_add=True)
+    created_date = models.DateTimeField(auto_now_add=True)
+    approved_comment = models.BooleanField(default=False)
 
     def approve(self):
         self.approved_comment = True

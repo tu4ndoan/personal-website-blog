@@ -64,6 +64,7 @@ class LandingPageView(View):
 
 
 def add_comment_to_post(request, pk):
+    template_name = 'blog/add_comment_to_post.html'
     post = get_object_or_404(BlogPost, pk=pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
@@ -74,7 +75,7 @@ def add_comment_to_post(request, pk):
             return redirect('post_detail', pk=pk)
     else:
         form = CommentForm()
-    return render(request, 'blog/add_comment_to_post.html', {'form': form})
+    return render(request, template_name, {'form': form})
 
 
 @login_required
