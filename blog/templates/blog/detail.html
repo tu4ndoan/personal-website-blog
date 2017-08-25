@@ -7,9 +7,8 @@
         <div class="bg-white">
             <img src="{{ blogpost.feature_image.url }}" class="img-fluid">
             <p class="text-dark">{{ blogpost.content }}</p>
-            <div class="fb-comments" data-href="{% url 'blog:detail' blogpost.id %}" data-numposts="5"></div>
             <hr>
-                <a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=blogpost.id %}">Add comment</a>
+                <a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
                 {% for comment in post.comments.all %}
                     {% if user.is_authenticated or comment.approved_comment %}
                         <div class="comment">
