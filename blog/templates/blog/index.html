@@ -26,6 +26,9 @@
                                 <a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fteqitez.herokuapp.com/blog%2F&amp;src=sdkpreparse">Share</a>
                             </div>
                         </div>
+                        <div>
+                            <a href="{% url 'blog:detail' posts.id %}">Comments: {{ posts.approved_comments.count }}</a>
+                        </div>
                     {% endif %}
                     <br><br>
                 </div>
