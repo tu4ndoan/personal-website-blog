@@ -64,7 +64,7 @@ class LandingPageView(View):
 
 
 def add_comment_to_post(request, pk):
-    post = get_object_or_404(BlogPost, {'pk':pk})
+    post = get_object_or_404(BlogPost, pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
