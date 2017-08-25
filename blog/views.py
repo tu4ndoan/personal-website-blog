@@ -1,5 +1,5 @@
 from django.views import generic
-from .models import BlogPost
+from .models import BlogPost, Comment
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import View
@@ -64,7 +64,7 @@ class LandingPageView(View):
 
 
 def add_comment_to_post(request, pk):
-    post = get_object_or_404(Post, pk=pk)
+    post = get_object_or_404(BlogPost, pk=pk)
     if request.method == "POST":
         form = CommentForm(request.POST)
         if form.is_valid():
