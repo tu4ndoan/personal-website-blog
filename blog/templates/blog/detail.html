@@ -8,29 +8,30 @@
             <img src="{{ blogpost.feature_image.url }}" class="img-fluid">
             <p class="text-dark">{{ blogpost.content }}</p>
             <div class="fb-comments" data-href="{% url 'blog:detail' blogpost.id %}" data-numposts="5"></div>
+            <hr>
+                <a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=blogpost.id %}">Add comment</a>
+                {% for comment in post.comments.all %}
+                    {% if user.is_authenticated or comment.approved_comment %}
+                        <div class="comment">
+                            <div class="date">
+                                {{ comment.created_date }}
+                                {% if not comment.approved_comment %}
+                                    <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
+                                    <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
+                                {% endif %}
+                            </div>
+                            <strong>{{ comment.author }}</strong>
+                            <p>{{ comment.text|linebreaks }}</p>
+                        </div>
+                    {% endif %}
+                {% empty %}
+                    <p>No comments here yet :(</p>
+                {% endfor %}
         </div>
         <br>
 
     </div>
 
-    <hr>
-    <a class="btn btn-default" href="#">Add comment</a>
-    {% for comment in post.comments.all %}
-        {% if user.is_authenticated or comment.approved_comment %}
-            <div class="comment">
-                <div class="date">
-                    {{ comment.created_date }}
-                    {% if not comment.approved_comment %}
-                        <a class="btn btn-default" href="{% url 'comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
-                        <a class="btn btn-default" href="{% url 'comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok"></span></a>
-                    {% endif %}
-                </div>
-                <strong>{{ comment.author }}</strong>
-                <p>{{ comment.text|linebreaks }}</p>
-            </div>
-        {% endif %}
-    {% empty %}
-        <p>No comments here yet :(</p>
-    {% endfor %}
+
 
 {% endblock %}
