@@ -3,7 +3,7 @@
 {% block body %}
     <br><br>
     <div class="container post-container">
-        <h1 class="text-light post_title">{{ blogpost.post_title}}</h1>
+        <h1 class="text-light text-center">{{ blogpost.post_title}}</h1>
         <div class="bg-white post-container">
             <img src="{{ blogpost.feature_image.url }}" class="post-img">
             <p class="text-dark post-text">{{ blogpost.content }}</p>
@@ -18,18 +18,17 @@
                                     <a class="btn btn-default" href="{% url 'blog:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok">ok</span></a>
                                 {% endif %}
                             </div>
-
                             <p class="comment-content">"{{ comment.text }}"</p>
                             <span class="text-success comment-author">{{ comment.name }} </span>
                             <span class="comment-date"> at {{ comment.created_date }}</span>
                         </div>
+                        <br>
                     {% endif %}
                 {% empty %}
                     <p>No comments here yet</p>
                 {% endfor %}
         </div>
         <br>
-
     </div><br><br>
     <div class="footer container container-fluid align-self-center text-center text-light">&copy; 2017 Tuan Doan. All rights reserved</div>
 {% endblock %}

@@ -7,7 +7,8 @@
 
             {% for posts in object_list reversed %}
                 <div class="container align-self-center bg-white post text-center">
-                    <h3><a class="post-title text-dark text-center" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></h3>
+                <br>
+                    <h3><a class="text-dark text-center" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></h3>
                     <div class="post-info text-center">
                         <i>{{ posts.publish_date }}</i> by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
                     </div>
