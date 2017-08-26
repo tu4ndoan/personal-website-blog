@@ -20,10 +20,9 @@
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
                     {% else %}
-                        <div class="social-share">
+                        <div class="social-share text-center">
                             {% with "share this in" as share_txt %}
                                 {% with "https://teqitez.herokuapp.com/" as host %}
-
                                         {% with "title" as title %}
                                             {% with "twitter" as service %}
                                                 <div class="d-inline">
@@ -73,9 +72,6 @@
                                                     <i class="fa fa-google-plus"></i>
                                                 </a>
                                             {% endwith %}
-
-
-
                                         {% endwith%}
                                 {% endwith%}
                             {% endwith%}
