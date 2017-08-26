@@ -14,7 +14,7 @@
                     </div>
                     <br><br>
                     <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post-img"><br><br></a>
-                        <h5 class="hooker">{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-success">Read</a></h5>
+                        <h5 class="hooker">&lt;{{ posts.hooker }}&sol;&gt; -- <a href="{% url 'blog:detail' posts.id %}" class="btn btn-default">Read</a></h5>
                     <br>
                     {% if user.is_authenticated %}
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
@@ -88,10 +88,9 @@
                 </div>
                 <br><br>
             {% endfor %}
-
     {% else %}
         <h1>You haven't post anything!</h1>
     {% endif %}
-        <div class="footer container-fluid container align-self-center text-center text-light">&copy; Tuan Doan 2017. All rights reserved</div>
+        <div class="footer container-fluid container align-self-center text-center text-light">&copy; 2017 Tuan Doan. All rights reserved</div>
     {% endblock %}
 </div>
