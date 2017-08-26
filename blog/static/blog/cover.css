@@ -27,7 +27,9 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  background: white url('images/01_bg.png') no-repeat fixed center;
+    background-size: 1920px 1080px;
+    font-family: 'Ubuntu', cursive;
 }
 body {
   color: #fff;
@@ -58,51 +60,6 @@ body {
   padding: 2rem;
 }
 
-
-/*
- * Header
- */
-
-.masthead {
-  margin-bottom: 2rem;
-}
-
-.masthead-brand {
-  margin-bottom: 0;
-}
-
-.nav-masthead .nav-link {
-  padding: .25rem 0;
-  font-weight: bold;
-  color: rgba(255,255,255,.5);
-  background-color: transparent;
-  border-bottom: .25rem solid transparent;
-}
-
-.nav-masthead .nav-link:hover,
-.nav-masthead .nav-link:focus {
-  border-bottom-color: rgba(255,255,255,.25);
-}
-
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
-}
-
-.nav-masthead .active {
-  color: #fff;
-  border-bottom-color: #fff;
-}
-
-@media (min-width: 48em) {
-  .masthead-brand {
-    float: left;
-  }
-  .nav-masthead {
-    float: right;
-  }
-}
-
-
 /*
  * Cover
  */
@@ -117,44 +74,26 @@ body {
 
 
 /*
- * Footer
- */
-
-.mastfoot {
-  color: rgba(255,255,255,.5);
-}
-
-
-/*
  * Affix and center
  */
 
 @media (min-width: 40em) {
-  /* Pull out the header and footer */
-  .masthead {
-    position: fixed;
-    top: 0;
-  }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
   /* Start the vertical centering */
   .site-wrapper-inner {
     vertical-align: middle;
   }
-  /* Handle the widths */
-  .masthead,
-  .mastfoot,
   .cover-container {
     width: 100%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
 @media (min-width: 62em) {
-  .masthead,
-  .mastfoot,
   .cover-container {
     width: 42rem;
   }
+}
+
+footer {
+    bottom: 0px;
+    text-align: center;
 }
