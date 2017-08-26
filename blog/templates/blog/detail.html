@@ -6,9 +6,9 @@
         <h1 class="text-light post_title">{{ blogpost.post_title}}</h1>
         <div class="bg-white post-container">
             <img src="{{ blogpost.feature_image.url }}" class="post_img">
-            <p class="text-dark">{{ blogpost.content }}</p>
+            <p class="text-dark post-text">{{ blogpost.content }}</p>
             <hr>
-                &nbsp;<a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
+                <a class="btn btn-primary addcomment" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
                 {% for comment in blogpost.comments.all %}
                     {% if user.is_authenticated or comment.approved_comment %}
                         <div class="comment-container">
