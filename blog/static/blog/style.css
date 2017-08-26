@@ -2,6 +2,8 @@ body {
     background: white url("images/01_bg.jpeg") no-repeat fixed center ;
     background-size: 1920px 1080px;
     font-family: 'Ubuntu', cursive;
+    min-height: 75rem;
+    padding-top: 4.5rem;
 }
 
 #footer {
