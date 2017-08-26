@@ -56,6 +56,15 @@
                                             </a>
                                         {% endwith %}
 
+                                        {% with "google plus" as service %}
+                                            <a class="btn google-share share-btn"
+                                               href="http://plus.google.com/share?app=110&amp;url={{ host }}{% url 'blog:detail' posts.id %}"
+                                               target="_blank"
+                                               title="{{ share_txt }} {{ service }}">
+                                                <i class="fa fa-google-plus"></i>
+                                            </a>
+                                        {% endwith %}
+
 
 
                                     {% endwith%}
