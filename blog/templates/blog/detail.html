@@ -8,19 +8,20 @@
             <img src="{{ blogpost.feature_image.url }}" class="post_img">
             <p class="text-dark">{{ blogpost.content }}</p>
             <hr>
-                <a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
+                &nbsp;<a class="btn btn-primary" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
                 {% for comment in blogpost.comments.all %}
                     {% if user.is_authenticated or comment.approved_comment %}
                         <div class="comment-container">
                             <div class="date">
-                                {{ comment.created_date }}
                                 {% if not comment.approved_comment %}
                                     <a class="btn btn-default" href="{% url 'blog:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove">rm</span></a>
                                     <a class="btn btn-default" href="{% url 'blog:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok">ok</span></a>
                                 {% endif %}
                             </div>
 
-                            <p class="comment-content">"{{ comment.text }}"</p> - <span class="text-success comment-author">{{ comment.name }}</span>
+                            <p class="comment-content">"{{ comment.text }}"</p>
+                            <span class="text-success comment-author">{{ comment.name }}</span>
+                            <span class="comment-date">{{ comment.created_date }}</span>
                         </div>
                         <br>
                     {% endif %}

@@ -31,6 +31,10 @@ body {
 .comment-author {
     color: #16181b;
 }
+
+.comment-date {
+    margin-left: 0;
+}
 /* */
 
 
@@ -61,23 +65,8 @@ body {
     color: #333333;
 }
 
- /* unvisited link */
-a:link {
-    color: green;
-}
-
-/* visited link */
-a:visited {
-    color: seagreen;
-}
-
 /* mouse over link */
 a:hover {
-    color: #333333;
+    color: darkgreen;
     text-decoration: none;
-}
-
-/* selected link */
-a:active {
-    color: green;
 }
