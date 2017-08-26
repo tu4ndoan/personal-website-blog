@@ -27,9 +27,10 @@ a:hover {
 html,
 body {
   height: 100%;
-  background: white url('images/01_bg.jpeg') no-repeat fixed center;
-    background-size: 1920px 1080px;
-    font-family: 'Ubuntu', cursive;
+  width: 100%;
+  background: white url('images/01_bg.jpeg') no-repeat fixed;
+  background-size: cover;
+  font-family: 'Ubuntu', cursive;
 }
 body {
   color: #fff;
