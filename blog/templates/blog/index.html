@@ -20,60 +20,69 @@
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
                     {% else %}
+                        <div class="social-share">
+                            {% with "share this in" as share_txt %}
+                                {% with "https://teqitez.herokuapp.com/" as host %}
 
-                        {% with "share this in" as share_txt %}
-                            {% with "https://teqitez.herokuapp.com/" as host %}
+                                        {% with "title" as title %}
+                                            {% with "twitter" as service %}
+                                                <div class="d-inline">
+                                                    <a class="btn twitter-share share-btn"
+                                                       href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' posts.id %}&amp;text={{ title }}"
+                                                       target="_blank"
+                                                       title="{{ share_txt }} {{ service }}">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </div>
+                                            {% endwith%}
 
-                                    {% with "title" as title %}
-                                        {% with "twitter" as service %}
-                                            <div class="d-inline">
-                                                <a class="btn twitter-share share-btn"
-                                                   href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' posts.id %}&amp;text={{ title }}"
+                                            {% with "facebook" as service %}
+                                                <div class="d-inline">
+                                                    <a class="btn facebook-share share-btn"
+                                                       href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' posts.id %}&amp;t={{ title }}"
+                                                       target="_blank"
+                                                       title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </div>
+                                            {% endwith%}
+
+                                            {% with "reddit" as service %}
+                                                <a class="btn reddit-share share-btn"
+                                                   href="#"
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
-                                                    <i class="fa fa-twitter"></i>
+                                                    <i class="fa fa-reddit"></i>
                                                 </a>
-                                            </div>
-                                        {% endwith%}
+                                            {% endwith %}
 
-                                        {% with "facebook" as service %}
-                                            <div class="d-inline">
-                                                <a class="btn facebook-share share-btn"
-                                                   href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' posts.id %}&amp;t={{ title }}"
+                                            {% with "linkedin" as service %}
+                                                <a class="btn linkedin-share share-btn"
+                                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ host }}{% url 'blog:detail' posts.id %}&amp;title={{ title }}&amp;ro=false&amp;summary=&amp;source="
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
-                                                <i class="fa fa-facebook"></i>
+                                                    <i class="fa fa-linkedin"></i>
                                                 </a>
-                                            </div>
+                                            {% endwith %}
+
+                                            {% with "google plus" as service %}
+                                                <a class="btn google-share share-btn"
+                                                   href="http://plus.google.com/share?app=110&amp;url={{ host }}{% url 'blog:detail' posts.id %}"
+                                                   target="_blank"
+                                                   title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            {% endwith %}
+
+
+
                                         {% endwith%}
-
-                                        {% with "linkedin" as service %}
-                                            <a class="btn linkedin-share share-btn"
-                                               href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ host }}{% url 'blog:detail' posts.id %}&amp;title={{ title }}&amp;ro=false&amp;summary=&amp;source="
-                                               target="_blank"
-                                               title="{{ share_txt }} {{ service }}">
-                                                <i class="fa fa-linkedin"></i>
-                                            </a>
-                                        {% endwith %}
-
-                                        {% with "google plus" as service %}
-                                            <a class="btn google-share share-btn"
-                                               href="http://plus.google.com/share?app=110&amp;url={{ host }}{% url 'blog:detail' posts.id %}"
-                                               target="_blank"
-                                               title="{{ share_txt }} {{ service }}">
-                                                <i class="fa fa-google-plus"></i>
-                                            </a>
-                                        {% endwith %}
-
-
-
-                                    {% endwith%}
+                                {% endwith%}
                             {% endwith%}
-                        {% endwith%}
-
-                        <div class="container text-info" >
-                            Comments {{ posts.approved_comments.count }}
                         </div>
+                        <!-- <div class="container text-info" >
+                            Comments posts.approved_comments.count
+                        </div> -->
                     {% endif %}
                     <br><br>
                 </div>

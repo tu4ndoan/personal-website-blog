@@ -19,9 +19,10 @@ body {
 /* comment */
 .comment-container {
     width: 80%;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: aliceblue;
-    margin: 10px 10px 10px 10px;
+    margin: auto;
+    display: block;
 }
 
 .comment-content {
@@ -46,7 +47,7 @@ body {
 
 /* post */
 .post-title {
-    text-align: left;
+    text-align: center;
 }
 
 .post {
@@ -70,6 +71,7 @@ body {
 
 .post-info {
     color: #333333;
+    margin: 10px 10px 10px 10px;
 }
 
 /* mouse over link */
@@ -94,7 +96,16 @@ a:hover {
     background-color: #c82333;
 }
 
+.reddit-share {
+    background-color: orangered;
+}
+
 .share-btn {
     width: 50px;
     color: white;
+}
+
+.social-share {
+    display: block;
+    margin: auto;
 }
