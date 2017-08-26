@@ -13,7 +13,7 @@
                         by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
                     </div>
                     <br><br>
-                    <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}"><br><br></a>
+                    <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post_img"><br><br></a>
                         <h5>{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-info">Read</a></h5>
                     <br>
                     {% if user.is_authenticated %}

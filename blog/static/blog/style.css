@@ -49,6 +49,35 @@ body {
 
 .post_img {
     display: block;
-    margin: auto;
+    margin: 10px auto 10px auto;
     width: 80%;
+}
+
+.post_text {
+    margin: 20px 20px 20px 20px;
+}
+
+.post_info {
+    color: #333333;
+}
+
+ /* unvisited link */
+a:link {
+    color: green;
+}
+
+/* visited link */
+a:visited {
+    color: seagreen;
+}
+
+/* mouse over link */
+a:hover {
+    color: #333333;
+    text-decoration: none;
+}
+
+/* selected link */
+a:active {
+    color: green;
 }
