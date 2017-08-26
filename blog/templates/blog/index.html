@@ -27,8 +27,8 @@
                             {% with "blog/1/" as page_url%}
                                 {% with "title" as title %}
                                     {% with "twitter" as service %}
-                                        <a href="http://twitter.com/share?url={{ host }}{{ page_url }}&amp;text={{ title }}" target="_blank" title="{{ share_txt }} {{ service }}">
-                                            <img src="http://carlosvin.alwaysdate.net/templates/img/tw.png" alt="{{ share_txt }} {{ service }}"/>
+                                        <a class="btn btn-primary" href="http://twitter.com/share?url={{ host }}{{ page_url }}&amp;text={{ title }}" target="_blank" title="{{ share_txt }} {{ service }}">
+                                            <i class="fa fa-twitter-square fa-3x"></i> tweet
                                         </a>
                                     {% endwith%}
                                 {% endwith%}
