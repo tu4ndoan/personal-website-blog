@@ -30,6 +30,7 @@ body {
 
 .comment-author {
     color: #16181b;
+    margin-left: 20px;
 }
 
 .comment-date {
@@ -37,14 +38,14 @@ body {
 }
 
 .addcomment {
-    margin-left: 20px;
+    margin-left: 10px;
 }
 
 /* */
 
 
 /* post */
-.post_title {
+.post-title {
     text-align: left;
 }
 
@@ -56,17 +57,18 @@ body {
     border-radius: 10px;
 }
 
-.post_img {
+.post-img {
     display: block;
     margin: 10px auto 10px auto;
     width: 80%;
+    top: 10px;
 }
 
-.post_text {
+.post-text {
     margin: 20px 20px 20px 20px;
 }
 
-.post_info {
+.post-info {
     color: #333333;
 }
 

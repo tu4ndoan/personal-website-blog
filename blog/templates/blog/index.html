@@ -7,13 +7,13 @@
 
             {% for posts in object_list reversed %}
                 <div class="container align-self-center bg-white post">
-                    <h3><b><a class="blog-title text-dark" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></b></h3>
-                    <div class="post_info">
+                    <h3><b><a class="post-title text-dark" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></b></h3>
+                    <div class="post-info">
                         {{ posts.publish_date }}<br>
                         by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
                     </div>
                     <br><br>
-                    <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post_img"><br><br></a>
+                    <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post-img"><br><br></a>
                         <h5>{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-success">Read</a></h5>
                     <br>
                     {% if user.is_authenticated %}
