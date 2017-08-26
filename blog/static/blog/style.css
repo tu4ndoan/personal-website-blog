@@ -9,6 +9,11 @@ body {
     text-align: center;
 }
 
+.footer {
+    position: absolute;
+    text-align: center;
+}
+
 .landingtext {
-    padding: 30%;
+    top: 200px;
 }
