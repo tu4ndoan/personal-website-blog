@@ -1,6 +1,6 @@
 body {
-    background: white url("images/01_bg.jpeg") no-repeat fixed center ;
-    background-size: auto 100%;
+    background: white url("images/01_bg.jpeg") no-repeat fixed;
+    background-size: cover;
     font-family: 'Ubuntu', cursive;
     min-height: 75rem;
     padding-top: 4.5rem;
