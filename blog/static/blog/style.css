@@ -74,7 +74,6 @@ body {
 
 /* mouse over link */
 a:hover {
-    color: darkgreen;
     text-decoration: none;
 }
 
@@ -87,4 +86,8 @@ a:hover {
 .twitter-share {
     background-color: deepskyblue;
     color: white;
+}
+
+.share-btn {
+    size: 50px 50px;
 }
