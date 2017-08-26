@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d1823f-906b-4abe-ba52-d6bc9affcbd4" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/blog/style.css" afterPath="$PROJECT_DIR$/blog/static/blog/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/detail.html" afterPath="$PROJECT_DIR$/blog/templates/blog/detail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -33,7 +29,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/templates/blog/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="313">
@@ -53,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/static/blog/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="670">
-              <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
+            <state relative-caret-position="636">
+              <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
               <folding />
             </state>
           </provider>
@@ -167,8 +163,8 @@
         <option value="$PROJECT_DIR$/mysite/settings.py" />
         <option value="$PROJECT_DIR$/blog/templates/blog/base.html" />
         <option value="$PROJECT_DIR$/blog/templates/blog/detail.html" />
-        <option value="$PROJECT_DIR$/blog/static/blog/style.css" />
         <option value="$PROJECT_DIR$/blog/templates/blog/index.html" />
+        <option value="$PROJECT_DIR$/blog/static/blog/style.css" />
       </list>
     </option>
   </component>
@@ -901,18 +897,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/blog/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="670">
-          <caret line="86" column="33" lean-forward="false" selection-start-line="86" selection-start-column="33" selection-end-line="86" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/blog/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="313">
           <caret line="32" column="81" lean-forward="false" selection-start-line="32" selection-start-column="81" selection-end-line="32" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="636">
+          <caret line="88" column="17" lean-forward="false" selection-start-line="88" selection-start-column="17" selection-end-line="88" selection-end-column="17" />
           <folding />
         </state>
       </provider>

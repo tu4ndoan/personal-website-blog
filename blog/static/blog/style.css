@@ -81,8 +81,10 @@ a:hover {
 /* social share */
 .facebook-share {
     background-color: #004085;
+    color: white;
 }
 
 .twitter-share {
     background-color: deepskyblue;
+    color: white;
 }
