@@ -32,15 +32,15 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/templates/blog/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+            <state relative-caret-position="51">
+              <caret line="15" column="87" lean-forward="false" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#870#874#0#HTML" expanded="true" />
-                <element signature="e#881#885#0#HTML" expanded="true" />
+                <element signature="e#879#883#0#HTML" expanded="true" />
+                <element signature="e#890#894#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#939#943#1#HTML" expanded="true" />
-                <element signature="e#943#948#0#HTML" expanded="true" />
+                <element signature="e#948#952#1#HTML" expanded="true" />
+                <element signature="e#952#957#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -920,15 +920,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/blog/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+        <state relative-caret-position="51">
+          <caret line="15" column="87" lean-forward="false" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
           <folding>
             <element signature="n#style#0;n#span#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#870#874#0#HTML" expanded="true" />
-            <element signature="e#881#885#0#HTML" expanded="true" />
+            <element signature="e#879#883#0#HTML" expanded="true" />
+            <element signature="e#890#894#0#HTML" expanded="true" />
             <element signature="n#style#0;n#span#1;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#939#943#1#HTML" expanded="true" />
-            <element signature="e#943#948#0#HTML" expanded="true" />
+            <element signature="e#948#952#1#HTML" expanded="true" />
+            <element signature="e#952#957#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
