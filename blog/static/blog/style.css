@@ -77,3 +77,12 @@ a:hover {
     color: darkgreen;
     text-decoration: none;
 }
+
+/* social share */
+.facebook-share {
+    background-color: #004085;
+}
+
+.twitter-share {
+    background-color: deepskyblue;
+}

@@ -26,22 +26,22 @@
                                     {% with "title" as title %}
                                         {% with "twitter" as service %}
                                             <div class="d-inline text-light">
-                                                <a class="btn btn-primary"
+                                                <a class="btn twitter-share"
                                                    href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' posts.id %}&amp;text={{ title }}"
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
-                                                    <i class="fa fa-twitter-square"></i> Tweet
+                                                    <i class="fa fa-twitter fa-3x"></i>
                                                 </a>
                                             </div>
                                         {% endwith%}
 
                                         {% with "facebook" as service %}
                                             <div class="d-inline text-light">
-                                                <a class="btn btn-primary"
+                                                <a class="btn facebook-share"
                                                    href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' posts.id %}&amp;t={{ title }}"
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
-                                                <i class="fa fa-facebook-square"></i> Share
+                                                <i class="fa fa-facebook fa-3x"></i>
                                                 </a>
                                             </div>
                                         {% endwith%}
