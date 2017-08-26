@@ -6,10 +6,12 @@
     {% if object_list %}
 
             {% for posts in object_list reversed %}
-                <div class="container align-self-center bg-white">
+                <div class="container align-self-center bg-white post">
                     <h3><b><a class="blog-title text-dark" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></b></h3>
-                    {{ posts.publish_date }}<br>
-                    by Tuan Doan
+                    <div class="post_info">
+                        {{ posts.publish_date }}<br>
+                        by Tuan Doan
+                    </div>
                     <br><br>
                     <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}"><br><br></a>
                         <h5>{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-info">Read</a></h5>
@@ -25,7 +27,7 @@
                                         {% with "twitter" as service %}
                                             <div class="d-inline">
                                                 <a class="btn btn-primary"
-                                                   href="http://twitter.com/share?url={% url 'blog:detail' posts.id %}&amp;text={{ title }}"
+                                                   href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' posts.id %}&amp;text={{ title }}"
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
                                                     <i class="fa fa-twitter-square"></i> Tweet
@@ -36,11 +38,11 @@
                                         {% with "facebook" as service %}
                                             <div class="d-inline">
                                                 <a class="btn btn-primary"
-                                                   href="http://www.facebook.com/share.php?u={% url 'blog:detail' posts.id %}&amp;t={{ title }}"
+                                                   href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' posts.id %}&amp;t={{ title }}"
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
-                                                </a>
                                                 <i class="fa fa-facebook-square"></i> Share
+                                                </a>
                                             </div>
                                         {% endwith%}
                                     {% endwith%}
