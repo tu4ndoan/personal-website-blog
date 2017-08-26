@@ -10,6 +10,10 @@ body {
     position: absolute;
     text-align: center;
     bottom: 0;
+    color: white;
+    display: block;
+    margin: auto;
+    width: 100%;
 }
 
 .landing {
