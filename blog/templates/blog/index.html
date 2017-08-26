@@ -10,7 +10,7 @@
                     <h3><b><a class="blog-title text-dark" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></b></h3>
                     <div class="post_info">
                         {{ posts.publish_date }}<br>
-                        by Tuan Doan
+                        by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
                     </div>
                     <br><br>
                     <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}"><br><br></a>
@@ -57,7 +57,7 @@
                 </div>
                 <br><br>
             {% endfor %}
-
+            <div class="footer">Copyright &copy; Tuan Doan, all rights served</div>
     {% else %}
         <h1>You haven't post anything!</h1>
     {% endif %}
