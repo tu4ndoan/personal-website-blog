@@ -14,7 +14,7 @@
                     </div>
                     <br><br>
                     <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post-img"><br><br></a>
-                        <h5>{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-success">Read</a></h5>
+                        <h5 class="hooker">{{ posts.hooker }} <a href="{% url 'blog:detail' posts.id %}" class="text-success">Read</a></h5>
                     <br>
                     {% if user.is_authenticated %}
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>

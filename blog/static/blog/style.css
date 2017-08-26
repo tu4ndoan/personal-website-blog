@@ -48,6 +48,7 @@ body {
 /* post */
 .post-title {
     text-align: center;
+    margin: 10px 10px 0 10px;
 }
 
 .post {
@@ -63,6 +64,10 @@ body {
     margin: 10px auto 10px auto;
     width: 80%;
     top: 10px;
+}
+
+.hooker {
+    text-align: center;
 }
 
 .post-text {
