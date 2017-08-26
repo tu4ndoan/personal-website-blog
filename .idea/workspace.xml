@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b0d1823f-906b-4abe-ba52-d6bc9affcbd4" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/static/blog/style.css" afterPath="$PROJECT_DIR$/blog/static/blog/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/blog/templates/blog/index.html" afterPath="$PROJECT_DIR$/blog/templates/blog/index.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,28 +30,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/blog/templates/blog/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="15" column="87" lean-forward="false" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
+            <state relative-caret-position="221">
+              <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
               <folding>
                 <element signature="n#style#0;n#span#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#879#883#0#HTML" expanded="true" />
-                <element signature="e#890#894#0#HTML" expanded="true" />
+                <element signature="e#933#937#0#HTML" expanded="true" />
+                <element signature="e#944#948#0#HTML" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-                <element signature="e#948#952#1#HTML" expanded="true" />
-                <element signature="e#952#957#0#HTML" expanded="true" />
+                <element signature="n#style#0;n#span#2;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#1092#1096#1#HTML" expanded="true" />
+                <element signature="e#1096#1101#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/blog/static/blog/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="62" lean-forward="false" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
+            <state relative-caret-position="620">
+              <caret line="114" column="12" lean-forward="false" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -154,12 +156,12 @@
         <option value="$PROJECT_DIR$/blog/views.py" />
         <option value="$PROJECT_DIR$/blog/templates/blog/add_comment_to_post.html" />
         <option value="$PROJECT_DIR$/mysite/settings.py" />
-        <option value="$PROJECT_DIR$/blog/static/blog/style.css" />
         <option value="$PROJECT_DIR$/blog/static/blog/cover.css" />
         <option value="$PROJECT_DIR$/blog/templates/blog/base.html" />
         <option value="$PROJECT_DIR$/blog/templates/blog/detail.html" />
         <option value="$PROJECT_DIR$/blog/templates/blog/cover.html" />
         <option value="$PROJECT_DIR$/blog/templates/blog/index.html" />
+        <option value="$PROJECT_DIR$/blog/static/blog/style.css" />
       </list>
     </option>
   </component>
@@ -873,14 +875,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/blog/static/blog/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="62" lean-forward="false" selection-start-line="1" selection-start-column="62" selection-end-line="1" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/blog/static/blog/images/favicon.ico">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -920,16 +914,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/blog/templates/blog/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="15" column="87" lean-forward="false" selection-start-line="15" selection-start-column="87" selection-end-line="15" selection-end-column="87" />
+        <state relative-caret-position="221">
+          <caret line="16" column="67" lean-forward="true" selection-start-line="16" selection-start-column="67" selection-end-line="16" selection-end-column="67" />
           <folding>
             <element signature="n#style#0;n#span#0;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#879#883#0#HTML" expanded="true" />
-            <element signature="e#890#894#0#HTML" expanded="true" />
+            <element signature="e#933#937#0#HTML" expanded="true" />
+            <element signature="e#944#948#0#HTML" expanded="true" />
             <element signature="n#style#0;n#span#1;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
-            <element signature="e#948#952#1#HTML" expanded="true" />
-            <element signature="e#952#957#0#HTML" expanded="true" />
+            <element signature="n#style#0;n#span#2;n#a#0;n#h5#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#1092#1096#1#HTML" expanded="true" />
+            <element signature="e#1096#1101#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/blog/static/blog/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="620">
+          <caret line="114" column="12" lean-forward="false" selection-start-line="114" selection-start-column="12" selection-end-line="114" selection-end-column="12" />
+          <folding />
         </state>
       </provider>
     </entry>

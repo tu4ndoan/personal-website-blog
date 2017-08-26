@@ -54,6 +54,7 @@ body {
 .post-title {
     text-align: center;
     margin: 10px 10px 0 10px;
+    padding-top: 10px;
 }
 
 .post {
@@ -111,7 +112,7 @@ a:hover {
 }
 
 .share-btn {
-    width: 50px;
+    width: 70px;
     color: white;
 }
 
