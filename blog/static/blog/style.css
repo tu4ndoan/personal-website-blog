@@ -1,9 +1,10 @@
 body {
     background: white url("images/01_bg.jpeg") no-repeat fixed center ;
-    background-size: 1920px 1080px;
+    background-size: auto 100%;
     font-family: 'Ubuntu', cursive;
     min-height: 75rem;
     padding-top: 4.5rem;
+    height: 100%;
 }
 
 #footer {
@@ -11,9 +12,7 @@ body {
     text-align: center;
     bottom: 0;
     color: white;
-    display: block;
     margin: auto;
-    width: 100%;
 }
 
 .landing {
