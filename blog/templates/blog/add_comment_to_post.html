@@ -1,11 +1,13 @@
 {% extends 'blog/base.html' %}
 
 {% block body %}
-    <div class="bg-white text-dark text-center">
-        <h1>New comment</h1>
+    <div class="bg-white text-dark text-left post-container container">
+        <h1>new comment</h1>
         <form method="POST" class="post-form">{% csrf_token %}
             {{ form.as_p }}
             <button type="submit" class="save btn btn-default">Send</button>
         </form>
+    <br>
+    <br>
     </div>
 {% endblock %}
