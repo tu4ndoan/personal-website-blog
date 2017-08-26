@@ -14,11 +14,6 @@ body {
     padding: 0 1.5rem;
 }
 
-.post_info {
-    text-align: left;
-    color: #2e3133;
-}
-
 .post_title {
     text-align: left;
 }
@@ -26,4 +21,29 @@ body {
 .post {
     border-radius: 10px;
 
+}
+
+.comment-container {
+    width: 100%;
+    border-radius: 5px;
+    background-color: #868e96;
+}
+
+.comment-content {
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    bottom: 20px;
+}
+
+.comment-author {
+    color: #343a40;
+}
+
+.post-container {
+    border-radius: 10px;
+}
+
+.post_img {
+    align-self: center;
 }
