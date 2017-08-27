@@ -14,8 +14,12 @@
                         <div class="comment-container">
                             <div class="date">
                                 {% if not comment.approved_comment %}
-                                    <a class="btn btn-default" href="{% url 'blog:comment_remove' pk=comment.pk %}"><span class="glyphicon glyphicon-remove">rm</span></a>
-                                    <a class="btn btn-default" href="{% url 'blog:comment_approve' pk=comment.pk %}"><span class="glyphicon glyphicon-ok">ok</span></a>
+                                    <a class="btn btn-default" href="{% url 'blog:comment_remove' pk=comment.pk %}">
+                                        <span class="glyphicons glyphicons-remove-sign" style="background-color: #bd2130; color: white;"></span>
+                                    </a>
+                                    <a class="btn btn-default" href="{% url 'blog:comment_approve' pk=comment.pk %}">
+                                        <span class="glyphicons glyphicons-ok-sign" style="background-color: #1e7e34; color: white;"></span>
+                                    </a>
                                 {% endif %}
                             </div>
                             <p class="comment-content">"{{ comment.text }}"</p>
