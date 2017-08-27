@@ -19,7 +19,7 @@
                                             {% with "twitter" as service %}
                                                 <div class="d-inline">
                                                     <a class="btn twitter-share share-btn"
-                                                       href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' posts.id %}&amp;text={{ title }}"
+                                                       href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' blogpost.id %}&amp;text={{ title }}"
                                                        target="_blank"
                                                        title="{{ share_txt }} {{ service }}">
                                                         <i class="fa fa-twitter"></i>
@@ -30,7 +30,7 @@
                                             {% with "facebook" as service %}
                                                 <div class="d-inline">
                                                     <a class="btn facebook-share share-btn"
-                                                       href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' posts.id %}&amp;t={{ title }}"
+                                                       href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' blogpost.id %}&amp;t={{ title }}"
                                                        target="_blank"
                                                        title="{{ share_txt }} {{ service }}">
                                                     <i class="fa fa-facebook"></i>
@@ -40,7 +40,7 @@
 
                                             {% with "linkedin" as service %}
                                                 <a class="btn linkedin-share share-btn"
-                                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ host }}{% url 'blog:detail' posts.id %}&amp;title={{ title }}&amp;ro=false&amp;summary=&amp;source="
+                                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ host }}{% url 'blog:detail' blogpost.id %}&amp;title={{ title }}&amp;ro=false&amp;summary=&amp;source="
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
                                                     <i class="fa fa-linkedin"></i>
@@ -49,7 +49,7 @@
 
                                             {% with "google plus" as service %}
                                                 <a class="btn google-share share-btn"
-                                                   href="http://plus.google.com/share?app=110&amp;url={{ host }}{% url 'blog:detail' posts.id %}"
+                                                   href="http://plus.google.com/share?app=110&amp;url={{ host }}{% url 'blog:detail' blogpost.id %}"
                                                    target="_blank"
                                                    title="{{ share_txt }} {{ service }}">
                                                     <i class="fa fa-google-plus"></i>
