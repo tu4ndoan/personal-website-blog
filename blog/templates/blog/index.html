@@ -17,9 +17,11 @@
                     <h5 class="hooker text-dark">
                         <a href="{% url 'blog:detail' posts.id %}">
                             <!--<span style="color: green">&lt;awesome&gt;</span>-->
-                            <span style="color: green">&#xe257;</span>
+                            <span style="color: green">
+                                <i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i>
+                            </span>
                             <span style="color: black">{{ posts.hooker }}</span>
-                            <span style="color: green">&#xe258;</span>
+                            <span style="color: green"><i class="fa fa-code"></i></span>
                             <!--<span style="color: green">&lt;&sol;awesome&gt;</span>-->
                         </a>
                     </h5>

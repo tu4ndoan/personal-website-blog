@@ -66,11 +66,11 @@
                         <div class="comment-container">
                             <div class="date">
                                 {% if not comment.approved_comment %}
-                                    <a class="btn btn-default" href="{% url 'blog:comment_remove' pk=comment.pk %}">
-                                        <span class="glyphicons glyphicons-remove-sign" style="background-color: #bd2130; color: white;"></span>
+                                    <a class="btn" href="{% url 'blog:comment_remove' pk=comment.pk %}">
+                                        <span class="fa fa-times" style="color: #bd2130;"></span>
                                     </a>
-                                    <a class="btn btn-default" href="{% url 'blog:comment_approve' pk=comment.pk %}">
-                                        <span class="glyphicons glyphicons-ok-sign" style="background-color: #1e7e34; color: white;"></span>
+                                    <a class="btn" href="{% url 'blog:comment_approve' pk=comment.pk %}">
+                                        <span class="fa fa-check" style="color: green;"></span>
                                     </a>
                                 {% endif %}
                             </div>
