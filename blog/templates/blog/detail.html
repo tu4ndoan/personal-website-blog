@@ -9,8 +9,8 @@
             <p class="text-dark post-text">{{ blogpost.content }}</p>
             <hr>
                     {% if user.is_authenticated %}
-                        <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
-                        <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
+                        <a class="btn btn-dark" href="{% url 'blog:post-delete' blogpost.id %}">delete</a>
+                        <a class="btn btn-light" href="{% url 'blog:post-update' blogpost.id %}">edit</a>
                     {% endif %}<br>
                         <div class="social-share text-center">
                             {% with "share this in" as share_txt %}
