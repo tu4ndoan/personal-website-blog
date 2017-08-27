@@ -8,6 +8,58 @@
             <img src="{{ blogpost.feature_image.url }}" class="post-img">
             <p class="text-dark post-text">{{ blogpost.content }}</p>
             <hr>
+                    {% if user.is_authenticated %}
+                        <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
+                        <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
+                    {% endif %}<br>
+                        <div class="social-share text-center">
+                            {% with "share this in" as share_txt %}
+                                {% with "https://teqitez.herokuapp.com/" as host %}
+                                        {% with "title" as title %}
+                                            {% with "twitter" as service %}
+                                                <div class="d-inline">
+                                                    <a class="btn twitter-share share-btn"
+                                                       href="http://twitter.com/share?url={{ host }}{% url 'blog:detail' posts.id %}&amp;text={{ title }}"
+                                                       target="_blank"
+                                                       title="{{ share_txt }} {{ service }}">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </div>
+                                            {% endwith%}
+
+                                            {% with "facebook" as service %}
+                                                <div class="d-inline">
+                                                    <a class="btn facebook-share share-btn"
+                                                       href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' posts.id %}&amp;t={{ title }}"
+                                                       target="_blank"
+                                                       title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </div>
+                                            {% endwith%}
+
+                                            {% with "linkedin" as service %}
+                                                <a class="btn linkedin-share share-btn"
+                                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ host }}{% url 'blog:detail' posts.id %}&amp;title={{ title }}&amp;ro=false&amp;summary=&amp;source="
+                                                   target="_blank"
+                                                   title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            {% endwith %}
+
+                                            {% with "google plus" as service %}
+                                                <a class="btn google-share share-btn"
+                                                   href="http://plus.google.com/share?app=110&amp;url={{ host }}{% url 'blog:detail' posts.id %}"
+                                                   target="_blank"
+                                                   title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            {% endwith %}
+                                        {% endwith%}
+                                {% endwith%}
+                            {% endwith%}
+                        </div><br>
+
                 <a class="btn btn-primary addcomment" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
                 {% for comment in blogpost.comments.all %}
                     {% if user.is_authenticated or comment.approved_comment %}

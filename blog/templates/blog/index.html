@@ -16,16 +16,18 @@
                     <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post-img"><br><br></a>
                     <h5 class="hooker text-dark">
                         <a href="{% url 'blog:detail' posts.id %}">
-                            <span style="color: green">&lt;awesome&gt;</span>
+                            <!--<span style="color: green">&lt;awesome&gt;</span>-->
+                            <span style="color: green">&#xe257;</span>
                             <span style="color: black">{{ posts.hooker }}</span>
-                            <span style="color: green">&lt;&sol;awesome&gt;</span>
+                            <span style="color: green">&#xe258;</span>
+                            <!--<span style="color: green">&lt;&sol;awesome&gt;</span>-->
                         </a>
                     </h5>
                     <br>
                     {% if user.is_authenticated %}
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
-                    {% endif %}
+                    {% endif %}<br>
                         <div class="social-share text-center">
                             {% with "share this in" as share_txt %}
                                 {% with "https://teqitez.herokuapp.com/" as host %}
@@ -51,15 +53,6 @@
                                                     </a>
                                                 </div>
                                             {% endwith%}
-
-                                            {% with "reddit" as service %}
-                                                <a class="btn reddit-share share-btn"
-                                                   href="#"
-                                                   target="_blank"
-                                                   title="{{ share_txt }} {{ service }}">
-                                                    <i class="fa fa-reddit-alien"></i>
-                                                </a>
-                                            {% endwith %}
 
                                             {% with "linkedin" as service %}
                                                 <a class="btn linkedin-share share-btn"
