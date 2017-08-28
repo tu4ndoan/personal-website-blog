@@ -4,3 +4,4 @@ whitenoise==3.3.0
 psycopg2
 Pillow
 markdown2==2.3.4
+markdown
