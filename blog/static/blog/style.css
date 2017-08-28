@@ -126,8 +126,8 @@ a:hover {
     cursor: pointer;
     transition: 0.3s;
     width: 80%;
-    align-self: center;
-    text-align: center;
+    display: block;
+    margin: auto;
 }
 
 #myImg:hover {opacity: 0.7;}
@@ -152,7 +152,7 @@ a:hover {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 700px;
+    max-width: 1200px;
 }
 
 /* Caption of Modal Image */
