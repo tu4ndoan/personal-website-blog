@@ -6,7 +6,6 @@
         <h1 class="text-light text-center">{{ blogpost.post_title}}</h1>
         <div class="bg-white post-container">
             <img src="{{ blogpost.feature_image.url }}" class="post-img">
-            <span class="text-dark post-text">{{ blogpost.content }}</span><br>
             {{ blogpost.content|markdown }}
             <hr>
                     {% if user.is_authenticated %}
