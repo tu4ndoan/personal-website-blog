@@ -14,6 +14,11 @@
                     </div>
                     <br><br>
                     <img id="myImg" src="{{ posts.feature_image.url }}">
+                    <div id="myModal" class="modal">
+                      <span class="close">×</span>
+                      <img class="modal-content" id="img01">
+                      <div id="caption"></div>
+                    </div>
                     <h5 class="hooker text-dark">
                         <a href="{% url 'blog:detail' posts.id %}">
                             <!--<span style="color: green">&lt;awesome&gt;</span>-->
