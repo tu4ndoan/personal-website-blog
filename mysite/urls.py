@@ -18,12 +18,16 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 from django.views.generic.base import TemplateView
+from blog.views import login_user
 
 
 urlpatterns = [
     url(r'^$', TemplateView.as_view(template_name='blog/cover.html'), name="home"),
     url(r'^admin/', admin.site.urls),
-    url(r'^blog/', include('blog.urls'))
+    url(r'^login/$', login_user, name= 'login'),
+    url(r'^blog/', include('blog.urls')),
+    url(r'^about/$', TemplateView.as_view(template_name='blog/about.html', name='about')),
+
 ]
 
 if settings.DEBUG:

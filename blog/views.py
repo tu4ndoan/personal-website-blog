@@ -59,10 +59,6 @@ class LogoutView(View):
         return redirect('blog:index')
 
 
-class LandingPageView(View):
-    template_name = 'blog/index.html'
-
-
 def add_comment_to_post(request, pk):
     post = get_object_or_404(BlogPost, pk=pk)
     if request.method == "POST":
