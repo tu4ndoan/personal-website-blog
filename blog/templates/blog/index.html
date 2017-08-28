@@ -13,7 +13,7 @@
                         <i>{{ posts.publish_date }}</i> by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
                     </div>
                     <br><br>
-                    <a href="{% url 'blog:detail' posts.id %}"><img src="{{ posts.feature_image.url }}" class="post-img"><br><br></a>
+                    <img id="myImg" src="{{ posts.feature_image.url }}" class="post-img"><br><br>
                     <h5 class="hooker text-dark">
                         <a href="{% url 'blog:detail' posts.id %}">
                             <!--<span style="color: green">&lt;awesome&gt;</span>-->
