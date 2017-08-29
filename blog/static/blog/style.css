@@ -93,6 +93,16 @@ a:hover {
     background-color: deepskyblue;
 }
 
+.github-share:hover {
+    background-color: white;
+    color: indigo;
+}
+
+.github-share {
+    color: #6c757d;
+    background-color: white;
+}
+
 .linkedin-share:hover {
     background-color: #0056b3;
 }
