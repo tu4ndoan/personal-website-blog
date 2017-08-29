@@ -107,6 +107,10 @@ a:hover {
     background-color: #6c757d;
 }
 
+.share-btn:hover {
+    color: white;
+}
+
 .social-share {
     display: block;
     margin: auto;
