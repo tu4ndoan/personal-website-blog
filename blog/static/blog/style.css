@@ -85,32 +85,27 @@ a:hover {
 }
 
 /* social share */
-.facebook-share {
+.facebook-share:hover {
     background-color: #004085;
 }
 
-.twitter-share {
+.twitter-share:hover {
     background-color: deepskyblue;
 }
 
-.linkedin-share {
+.linkedin-share:hover {
     background-color: #0056b3;
 }
 
-.google-share {
+.google-share:hover {
     background-color: #c82333;
-}
-
-.reddit-share {
-    background-color: orangered;
 }
 
 .share-btn {
     width: 70px;
     color: white;
+    background-color: #6c757d;
 }
-
-.share-btn:hover {color:white;}
 
 .social-share {
     display: block;
