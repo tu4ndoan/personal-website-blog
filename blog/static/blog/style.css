@@ -60,10 +60,11 @@ body {
 }
 
 .post-img {
-    display: block;
-    margin: 10px auto 10px auto;
-    width: 80%;
     top: 10px;
+    width: 80%;
+    display: block;
+    margin: auto;
+    border-radius: 5px;
 }
 
 .hooker {
@@ -131,12 +132,8 @@ a:hover {
 
 /*style for img*/
 #myImg {
-    border-radius: 5px;
     cursor: pointer;
     transition: 0.3s;
-    width: 80%;
-    display: block;
-    margin: auto;
 }
 
 #myImg:hover {opacity: 0.7;}
@@ -161,7 +158,7 @@ a:hover {
     margin: auto;
     display: block;
     width: 80%;
-    max-width: 1200px;
+    max-width: 1000px;
 }
 
 /* Caption of Modal Image */
@@ -217,4 +214,12 @@ a:hover {
     .modal-content {
         width: 100%;
     }
+}
+
+.img-circle {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    display: block;
+    margin: auto;
 }

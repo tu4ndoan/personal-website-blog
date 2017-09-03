@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['teqitez.herokuapp.com',
                  'git.heroku.com',
+                 '127.0.0.1'
                  ]
 
 
