@@ -87,9 +87,30 @@
                 </div>
                 <br><br>
             {% endfor %}
-    {% else %}
-        <h1>You haven't post anything!</h1>
-    {% endif %}
+
+        {% if is_paginated %}
+            <div class="pagination container-fluid container text-center text-light">
+                <span class="page-links text-center -align-right" >
+                    {% if page_obj.has_previous %}
+                        <a href="/blog?page={{ page_obj.previous_page_number }}">previous </a>
+                    {% else %}
+                        <span class="text-muted">previous</span>&nbsp;
+                    {% endif %}
+                    <span class="page-current text-center">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </span>
+                    {% if page_obj.has_next %}
+                        <a href="/blog?page={{ page_obj.next_page_number }}"> &nbsp;next</a>
+                    {% endif %}
+                </span>
+            </div>
+        {% endif %}
+        {% else %}
+            <h3>My posts</h3>
+            <p>No posts found!!! :(</p>
+        {% endif %}
+
+<br>
         <div class="footer container-fluid container align-self-center text-center text-light">&copy; 2017 Tuan Doan. All rights reserved</div>
     {% endblock %}
 </div>

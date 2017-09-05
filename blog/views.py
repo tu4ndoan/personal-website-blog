@@ -4,16 +4,17 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.core.urlresolvers import reverse_lazy
 from django.views.generic import View
 from django.contrib.auth import login, logout, authenticate
-from .forms import UserForm, CommentForm
+from .forms import CommentForm
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 class IndexView(generic.ListView):
+    model = BlogPost
+    context_object_name = "blogpost_list"
     template_name = 'blog/index.html'
-
-    def get_queryset(self):
-        return BlogPost.objects.all()
+    paginate_by = 5
 
 
 class DetailView(generic.DetailView):
