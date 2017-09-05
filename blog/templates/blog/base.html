@@ -37,13 +37,13 @@
                 <div class="navbar-collapse collapse" id="navbarCollapse">
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'blog:index' %}">
+                                <a class="nav-link {% block active_home %}{% endblock %}" href="{% url 'blog:index' %}">
                                     <i class="fa fa-home"></i>
                                     home
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{% url 'about' %}">about</a>
+                                <a class="nav-link {% block active %}{% endblock %}" href="{% url 'about' %}">about</a>
                             </li>
                             {% if user.is_authenticated %}
                                 <li class="nav-item">

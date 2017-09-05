@@ -1,7 +1,7 @@
 {% extends 'blog/base.html' %}
-
+{% block active %}active{% endblock %}
 {% block body %}
-    <div class="container text-center bg-white post">
+    <div class="container bg-white post">
         <br><br>
         <img src="../../../media/blog_logo.jpeg" id="myImg" class="img-circle">
         <div id="myModal" class="modal">
@@ -9,13 +9,25 @@
               <img class="modal-content" id="img01">
               <div id="caption"></div>
         </div><br>
-        <h2>about me</h2>
-        <p style="margin: 20px 20px 20px 20px;">I'm a developer who loves to create. You can check them out
-        in my github account or in the projects page for more detail.</p>
-        <a href="https://github.com/tu4ndoan/">github</a>
-        <a href="https://linkedin.com/in/tu4ndoan/">linkedin</a>
+        <h2 class="text-center">about teqitez </h2>
+        <p class="text-center">Teqitez is a technology and lifestyle blog designed for gentlemen with high </p>
+        <h4 style="margin: 0 100px 0 100px;">technology</h4>
+        <p>simple and basic, yet necessary bits of knowledge, information about the innovating world</p>
+        <h4 style="margin: 0 100px 0 100px;">lifestyle</h4>
+        <p>Discover your true identity, what you may feel blessed to find out about yourself. What is wrong with your current lifestyle? Read and fix it, you only live once, shouldn't you live it good?.</p>
         <hr>
-        <h2>about the technologist </h2>
-        <p>Teqitez is a technology and lifestyle blog made using Django framework</p><br>
+        <h2 class="text-center">my readers</h2>
+        <p>readers I hope to approach is gentlemen and other people, who love technology and want to innovate, prepare themselves to face the innovative technology era.</p>
+        <hr>
+        <h2 class="text-center">about me</h2>
+        <p>I'm a developer who loves to create. You can check them out
+        in my github.</p>
+        <div class="text-center">See me on:<br>
+            <a href="https://github.com/tu4ndoan/">github</a> or
+            <a href="https://linkedin.com/in/tu4ndoan/">linkedin</a>
+        </div>
+        <hr>
     </div>
+    <div class="footer container-fluid container align-self-center text-center text-light">&copy; 2017 Tuan Doan. All rights reserved</div>
+
 {% endblock%}
