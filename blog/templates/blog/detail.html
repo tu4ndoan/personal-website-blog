@@ -5,7 +5,7 @@
     <div class="container post-container">
         <h1 class="text-light text-center">{{ blogpost.post_title}}</h1>
         <div class="bg-white post-container">
-            <img id="myImg" src="{{ blogpost.feature_image.url }}" alt="nice and free images" class="post-img">
+            <img id="myImg" src="{{ blogpost.feature_image }}" alt="nice and free images" class="post-img">
             <!-- The Modal -->
             <div id="myModal" class="modal">
               <span class="close">×</span>
@@ -35,7 +35,7 @@
                                                 </div>
                                             {% endwith%}
 
-                                            {% with "facebook" as service %}
+                                            {% with "faceb  ook" as service %}
                                                 <div class="d-inline">
                                                     <a class="btn facebook-share share-btn"
                                                        href="http://www.facebook.com/share.php?u={{ host }}{% url 'blog:detail' blogpost.id %}&amp;t={{ title }}"

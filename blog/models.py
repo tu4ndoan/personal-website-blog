@@ -7,7 +7,7 @@ class BlogPost(models.Model):
     post_title = models.CharField(max_length=150)
     publish_date = models.DateTimeField(verbose_name=None, name=None, auto_now_add=True)
     content = models.TextField()
-    feature_image = models.ImageField(upload_to='./')
+    feature_image = models.CharField(max_length=200, default='none')
     hooker = models.TextField()
 
     def get_absolute_url(self):

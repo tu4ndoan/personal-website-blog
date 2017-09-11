@@ -61,10 +61,11 @@ body {
 
 .post-img {
     top: 10px;
-    width: 80%;
+    width: 60%;
     display: block;
     margin: auto;
     border-radius: 5px;
+    background: black;
 }
 
 .hooker {
