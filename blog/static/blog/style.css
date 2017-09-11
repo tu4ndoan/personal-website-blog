@@ -65,7 +65,11 @@ body {
     display: block;
     margin: auto;
     border-radius: 5px;
-    background: black;
+}
+
+.post-img-container {
+    width: 100%;
+    background-color: black;
 }
 
 .hooker {
