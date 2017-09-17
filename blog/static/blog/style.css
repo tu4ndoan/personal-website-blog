@@ -60,7 +60,7 @@ body {
 }
 
 .post-img {
-    top: 10px;
+    top: 0;
     width: 60%;
     display: block;
     margin: auto;
@@ -70,6 +70,7 @@ body {
 .post-img-container {
     width: 100%;
     background-color: black;
+    border-radius: 5px 5px 0 0;
 }
 
 .hooker {
