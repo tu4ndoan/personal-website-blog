@@ -1,5 +1,6 @@
 {% extends 'blog/base.html' %}
 {% load markdown_deux_tags %}
+{% block title %} T | {{ blogpost.post_title }} {% endblock %}
 {% block body %}
     <br><br>
     <div class="container post-container">
