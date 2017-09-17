@@ -241,8 +241,14 @@ a:hover {
     border-radius: 50%;
 }
 
-p {
+#about {
     margin: 20px 100px 20px 100px;
-    text-align: left;
 }
 
+.about-me {
+    text-align: right;
+}
+
+.about-t {
+    text-align: left;
+}
