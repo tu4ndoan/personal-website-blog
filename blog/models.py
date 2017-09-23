@@ -16,6 +16,8 @@ class BlogPost(models.Model):
     def __str__(self):
         return self.post_title
 
+    def get_comment_count(self):
+        return self.comments.filter(post=self).count()
 
 class Comment(models.Model):
     post = models.ForeignKey(BlogPost, related_name='comments')
@@ -25,6 +27,7 @@ class Comment(models.Model):
 
     def __str__(self):
         return self.comment_content
+
 
 
 

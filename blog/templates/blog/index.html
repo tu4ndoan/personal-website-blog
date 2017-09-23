@@ -39,7 +39,8 @@
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
                     {% endif %}<br>
-                        <h6>share this post:</h6>
+                        <h6>number of comments: {{ posts.get_comment_count }}</h6>
+                        <h5>share this post:</h5>
                         <div class="social-share text-center">
                             {% with "share this in" as share_txt %}
                                 {% with "https://teqitez.herokuapp.com/" as host %}
