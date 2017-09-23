@@ -93,7 +93,7 @@
             {% endfor %}
 
         {% if is_paginated %}
-            <div class="pagination container-fluid container text-center text-light">
+            <div class="pagination container text-center text-light bg-white" >
                 <span class="page-links text-center -align-right" >
                     {% if page_obj.has_previous %}
                         <a href="/blog?page={{ page_obj.previous_page_number }}">previous </a>

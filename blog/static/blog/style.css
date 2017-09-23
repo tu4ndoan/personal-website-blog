@@ -252,3 +252,8 @@ a:hover {
 .about-t {
     text-align: left;
 }
+
+img {
+    width: 100%;
+    background-color: #000000;
+}
