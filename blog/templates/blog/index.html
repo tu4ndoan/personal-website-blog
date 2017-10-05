@@ -10,7 +10,7 @@
             {% for posts in object_list reversed %}
                 <div class="container align-self-center bg-white post text-center">
                 <br>
-                    <h3><a class="text-dark text-center" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></h3>
+                    <h1 class="title"><a class="text-dark text-center" href="{% url 'blog:detail' posts.id %}">{{ posts.post_title }}</a></h1>
                     <div class="post-info text-center">
                         <i>{{ posts.publish_date }}</i> by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
                     </div>
@@ -27,19 +27,21 @@
                     <h5 class="hooker text-dark">
                         <a href="{% url 'blog:detail' posts.id %}">
                             <!--<span style="color: green">&lt;awesome&gt;</span>-->
+                            <h2>
                             <span style="color: green">
                                 <i class="fa fa-angle-left"></i><i class="fa fa-angle-right"></i>
                             </span>
-                            <span style="color: black">{{ posts.hooker }}</span>
+                            <span style="color: black" class="title">{{ posts.hooker }}</span>
                             <span style="color: green"><i class="fa fa-code"></i></span>
                             <!--<span style="color: green">&lt;&sol;awesome&gt;</span>-->
+                            </h2>
                         </a>
                     </h5>
                     {% if user.is_authenticated %}
                         <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
                         <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
-                    {% endif %}<br>
-                        <h6>number of comments: {{ posts.get_comment_count }}</h6>
+                    {% endif %}
+                    <a class="btn text-white" style="background-color: #6c757d;" href="{% url 'blog:detail' posts.id %}">comments <span class="badge text-white bg-dark">{{ posts.get_comment_count }}</span></a><br><br>
                         <h5>share this post:</h5>
                         <div class="social-share text-center">
                             {% with "share this in" as share_txt %}

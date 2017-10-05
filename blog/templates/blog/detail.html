@@ -4,7 +4,7 @@
 {% block body %}
     <br><br>
     <div class="container post-container">
-        <h1 class="text-light text-center">{{ blogpost.post_title}}</h1>
+        <h1 class="text-light text-center title">{{ blogpost.post_title}}</h1>
         <i>{{ blogpost.publish_date }}</i> by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
         <div class="bg-white post-container">
         <div class="post-img-container">
@@ -71,7 +71,14 @@
                                 {% endwith%}
                             {% endwith%}
                         </div><br>
+                <div class="comment-form">
+                    <form method="POST" class="post-form">{% csrf_token %}
 
+            <button type="submit" class="save btn btn-default">Send</button>
+        </form>
+        </form>
+
+                </div>
                 <a class="btn btn-primary addcomment" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
                 {% for comment in blogpost.comments.all %}
 

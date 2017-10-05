@@ -7,6 +7,10 @@ body {
     height: 100%;
 }
 
+.title {
+    font-family: 'Italianno', cursive;
+}
+
 #footer {
     position: absolute;
     text-align: center;
