@@ -19,11 +19,13 @@
         <link rel="stylesheet" href="{% static 'fontawesome/css/font-awesome.min.css' %}">
         <link rel='stylesheet' type="text/css" href="{% static 'blog/style.css' %}" />
         <link rel="icon" href="{% static 'blog/images/icon.ico'%}"/>
+        {% block scrollScript %}
+        {% endblock %}
 
     </head>
     <body>
         <div class="container-fluid">
-            <nav class="navbar navbar-expand-md navbar-dark fixed-top text-light">
+            <nav class="navbar navbar-expand-md navbar-dark fixed-top text-light bg-dark">
                 <div class="navbar-header">
                      <a class="navbar-brand" href="https://teqitez.herokuapp.com/">
                         <img src="{% static 'blog/images/blog_logo.jpeg' %}" id="logo">
@@ -39,29 +41,22 @@
                         <ul class="nav navbar-nav navbar-right">
                             <li class="nav-item">
                                 <a class="nav-link {% block active_home %}{% endblock %}" href="{% url 'blog:index' %}">
-                                    <i class="fa fa-home"></i>
-                                    home
+                                    <i class=" fa fa-home">home</i>
+
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link {% block active %}{% endblock %}" href="{% url 'about' %}"><i class="fa fa-user-circle-o"></i>&nbsp;about</a>
+                                <a class="nav-link {% block active %}{% endblock %}" href="{% url 'about' %}"><span class=" fa fa-user-circle-o">&nbsp;about</span></a>
                             </li>
                             {% if user.is_authenticated %}
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'blog:post-add' %}">write</a>
+                                    <a class="nav-link" href="{% url 'blog:post-add' %}"><span class=" fa fa-edit">write</span></a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{% url 'blog:logout' %}">logout</a>
+                                    <a class="nav-link" href="{% url 'blog:logout' %}"><span class=" fa fa-sign-out">logout</span></a>
                                 </li>
                             {% endif %}
                         </ul>
-                <!--
-                        <form class="form-inline">
-                            <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                            <button class="btn" type="submit">
-                                <i class="fa fa-search"></i>
-                            </button>
-                        </form> -->
                 </div>
             </nav>
         </div>

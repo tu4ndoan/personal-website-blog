@@ -7,14 +7,13 @@ from django.contrib.auth import login, logout, authenticate
 from .forms import CommentForm
 from django.shortcuts import redirect, render, get_object_or_404
 from django.contrib.auth.decorators import login_required
-from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
 class IndexView(generic.ListView):
     model = BlogPost
     context_object_name = "blogpost_list"
     template_name = 'blog/index.html'
-    paginate_by = 5
+    paginate_by = 10
 
 
 class DetailView(generic.DetailView):

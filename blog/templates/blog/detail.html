@@ -5,7 +5,7 @@
     <br><br>
     <div class="container post-container">
         <h1 class="text-light text-center title">{{ blogpost.post_title}}</h1>
-        <i>{{ blogpost.publish_date }}</i> by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a>
+        <div class="text-center"><i class="text-white">{{ blogpost.publish_date }}</i> by <a href="https://twitter.com/tu4ndoan">Tuan Doan</a></div>
         <div class="bg-white post-container">
         <div class="post-img-container">
             <img id="myImg" src="{{ blogpost.feature_image }}" alt="nice and free images" class="post-img">
@@ -72,14 +72,10 @@
                             {% endwith%}
                         </div><br>
                 <div class="comment-form">
-                    <form method="POST" class="post-form">{% csrf_token %}
-
-            <button type="submit" class="save btn btn-default">Send</button>
-        </form>
         </form>
 
                 </div>
-                <a class="btn btn-primary addcomment" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Add comment</a>
+                <a class="btn btn-primary addcomment" href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">+ Comment</a>
                 {% for comment in blogpost.comments.all %}
 
                         <div class="comment-container">
@@ -96,7 +92,7 @@
                         </div>
                         <br>
                 {% empty %}
-                    <p>No comments yet, be the first to comment: <a href="{% url 'blog:add_comment_to_post' pk=blogpost.pk %}">Click</a></p>
+                    <p class="text-center">No comments yet!</p>
                 {% endfor %}
         </div>
         <br>

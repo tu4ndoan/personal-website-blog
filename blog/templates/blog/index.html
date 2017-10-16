@@ -2,6 +2,21 @@
 {% block active_home %}active{% endblock %}
 {% block title %} T | home {% endblock %}
 <div class="container-fluid">
+    {% block scrollScript %}
+        <!--the script to tell when user reach the bottom -->
+         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+                crossorigin="anonymous"></script>
+        <script>
+            var reachedBottom = false
+             $(window).scroll(
+                 function() {
+                    if($(window).scrollTop() + $(window).height() == $(document).height()) {
+                        reachedBottom = true
+                    }
+                });
+        </script>
+    {% endblock %}
     {% block body %}
 
         <br><br>
@@ -37,12 +52,16 @@
                             </h2>
                         </a>
                     </h5>
+
                     {% if user.is_authenticated %}
-                        <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}">delete</a>
-                        <a class="btn btn-light" href="{% url 'blog:post-update' posts.id %}">edit</a>
+                        <a class="btn btn-dark" href="{% url 'blog:post-delete' posts.id %}"><span class="fa fa-close text-danger"></span></a>
+                        <a class="btn btn-dark" href="{% url 'blog:post-update' posts.id %}"><span class="fa fa-edit text-white"></span></a>
+                        <span class="badge text-white bg-dark">{{ posts.get_comment_count }}</span>
                     {% endif %}
-                    <a class="btn text-white" style="background-color: #6c757d;" href="{% url 'blog:detail' posts.id %}">comments <span class="badge text-white bg-dark">{{ posts.get_comment_count }}</span></a><br><br>
-                        <h5>share this post:</h5>
+
+
+                        <h5><span class="fa fa-share-alt-square"> </span> share this:</h5>
+                <!-- bunch of cool share buttons -->
                         <div class="social-share text-center">
                             {% with "share this in" as share_txt %}
                                 {% with "https://teqitez.herokuapp.com/" as host %}
@@ -91,32 +110,39 @@
                             {% endwith%}
                         </div>
                     <br><br>
+                <!-- end of share buttons -->
+
                 </div>
                 <br><br>
             {% endfor %}
 
-        {% if is_paginated %}
-            <div class="pagination text-center text-light bg-white paging" style="width: 30%;" >
+
+        {% if True %}
+            <div class="pagination text-center text-light paging" style="width: 30%;" >
                 <span class="page-links text-center -align-right" >
                     {% if page_obj.has_previous %}
                         <a href="/blog?page={{ page_obj.previous_page_number }}">
-                            <i class="fa fa-chevron-left text-dark"></i>
+
                         </a>
                     {% else %}
                         <span class="text-muted">
-                            <i class="fa fa-chevron-left text-dark"></i>
+
                         </span>&nbsp;
                     {% endif %}
-                    <span class="page-current text-center text-dark">
-                        Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}
+                    <span class="page-current text-center text-white">
+                        <!--Page {{ page_obj.number }} / {{ page_obj.paginator.num_pages }}-->
+                        <h1>
+                            <a href="#"><i class="fa fa-chevron-circle-down"></i></a>&nbsp;
+                            <a href="#"><i class="fa fa-chevron-circle-up"></i></a>
+                        </h1>
                     </span>
                     {% if page_obj.has_next %}
                         <a href="/blog?page={{ page_obj.next_page_number }}"> &nbsp;
-                            <i class="fa fa-chevron-right text-dark"></i>
+
                         </a>
                     {% else %}
                         <span class="text-muted">
-                            <i class="fa fa-chevron-right text-dark"></i>
+
                         </span>&nbsp;
 
                     {% endif %}
@@ -124,11 +150,10 @@
             </div>
         {% endif %}
         {% else %}
-            <h3>My posts</h3>
-            <p>No posts found!!! :(</p>
+            <h3 class="text-center text-white">Welcome back, Daddy <3</h3>
         {% endif %}
 
 <br>
-        <div class="footer container-fluid container align-self-center text-center text-light">&copy; 2017 Tuan Doan. All rights reserved</div>
+        <div class="footer container-fluid container align-self-center text-center text-light" style="bottom: 0;">&copy; 2017 Tuan Doan. All rights reserved</div>
     {% endblock %}
 </div>
