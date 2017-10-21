@@ -6,27 +6,22 @@
         <br><br>
         <div id="about">
         <div class="about-me">
-        <img src="../../../media/me.PNG" id="myImg" class="img-circle">
+        <img src="../../../media/mypicture.jpeg" id="myImg" class="img-circle">
         <div id="myModal" class="modal">
               <span class="close">×</span>
               <img class="modal-content" id="img01">
               <div id="caption"></div>
         </div><br>
 
-            <h2 class="text-center"> about me </h2><br>
-            <p> I'm a seeker, a finder, an explorer who is always looking for something that even me myself couldn't make out!
-                What I always know is that I never stop. I never stop evolving because that's how the world, humanity, technology and everything else work.
-                Beside being an awesome explorer, I'm also a creator, not the creator, but I love to create, to make things.
-                I want to live a life that when I grow older, I have something to pass to younger generations, to my pupils *lol*.<br><br>
-                And below all that, I'm a high-functioning sociopath ;)
+            <h2 class="text-center"> About Us </h2><br>
+            <p> We are ...
             </p>
         </div>
         <hr>
         <div class="about-t">
             <img src="../../../media/mypicture.jpeg" id="myImg" class="img-circle"><br>
-            <h2 class="text-center">about T</h2><br>
-            <p class="text-left">I called this site "T", initial for my first name because I think this blog is also a place I can express 100% of myself.
-                T consists of 2 intended categories which are "technology" and "lifestyle".</p>
+            <h2 class="text-center">About T4G</h2><br>
+            <p class="text-left">T4G is a place where we get updated on Technology and Lifestyle...</p>
             <div class="tech text-right">
                 <h4>technology</h4>
                 <p>Just some technology related projects I do in my free time.</p>
@@ -37,24 +32,69 @@
             </div>
             <hr>
             <div class="reader">
-                <h2 class="text-center">about you</h2>
+                <h2 class="text-center">About You</h2>
                 <p>If you find yourself in the list below, well, hit that subscribe button immediately! Types of reader I hope to approach are: <br>
                 </p>
                 <ul>
-                    <li><a href="#">students</a> who also like creating small, simple but awesome stuffs.</li>
-                    <li><a href="#">people</a> who can't stand staying in same one place doing same boring job everyday.</li>
-                    <li><a href="#">adventurer</a> who love discover the world with their own eyes and feet.</li>
-                    <li><a href="#">gentlemen</a> who want to live a better life.</li>
-                    <li><a href="#">people</a> who want to make their life legendary.</li>
+                    <li><a href="#">a</a> loremipsum</li>
+                    <li><a href="#">b</a> loremipsum</li>
+                    <li><a href="#">c</a> loremipsum</li>
+                    <li><a href="#">d</a> loremipsum</li>
+                    <li><a href="#">e</a> loremipsum</li>
                 </ul>
             </div>
         </div>
 
         <hr>
-        <div class="text-center">More of me:<br>
-            <a href="https://github.com/tu4ndoan/">github</a> &nbsp;
-            <a href="https://linkedin.com/in/tu4ndoan/">linkedin</a> &nbsp;
-            <a href="https://facebook.com/tu4ndoan/">facebook</a>
+            <div class="text-center"><span class="fa fa-share-alt-square">&nbsp;share this</span><br>
+            <div class="social-share text-center">
+                            {% with "share this in" as share_txt %}
+                                {% with "https://teqitez.herokuapp.com/" as host %}
+
+                                        {% with "This blog is so awesome!" as title %}
+                                            {% with "twitter" as service %}
+                                                <div class="d-inline">
+                                                    <a class="btn twitter-share share-btn"
+                                                       href="http://twitter.com/share?url={{ host }}about&amp;text={{ title }}"
+                                                       target="_blank"
+                                                       title="{{ share_txt }} {{ service }}">
+                                                        <i class="fa fa-twitter"></i>
+                                                    </a>
+                                                </div>
+                                            {% endwith%}
+
+                                            {% with "facebook" as service %}
+                                                <div class="d-inline">
+                                                    <a class="btn facebook-share share-btn"
+                                                       href="http://www.facebook.com/share.php?u={{ host }}about&amp;t={{ title }}"
+                                                       target="_blank"
+                                                       title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-facebook"></i>
+                                                    </a>
+                                                </div>
+                                            {% endwith%}
+
+                                            {% with "linkedin" as service %}
+                                                <a class="btn linkedin-share share-btn"
+                                                   href="http://www.linkedin.com/shareArticle?mini=true&amp;url={{ host }}about&amp;title={{ title }}&amp;ro=false&amp;summary=&amp;source="
+                                                   target="_blank"
+                                                   title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-linkedin"></i>
+                                                </a>
+                                            {% endwith %}
+
+                                            {% with "google plus" as service %}
+                                                <a class="btn google-share share-btn"
+                                                   href="http://plus.google.com/share?app=110&amp;url={{ host }}about"
+                                                   target="_blank"
+                                                   title="{{ share_txt }} {{ service }}">
+                                                    <i class="fa fa-google-plus"></i>
+                                                </a>
+                                            {% endwith %}
+                                        {% endwith%}
+                                {% endwith%}
+                            {% endwith%}
+                        </div>
         </div>
         <hr>
         </div>

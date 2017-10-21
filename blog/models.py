@@ -10,19 +10,18 @@ class BlogPost(models.Model):
     content = models.TextField()
     feature_image = models.CharField(max_length=200, default='none')
     hooker = models.TextField()
-    #slug = models.SlugField(unique=True, default=None)
+    #slug = models.SlugField(unique=False, default=None)
 
     def __str__(self):
         return self.post_title
 
-    @models.permalink
     def get_absolute_url(self):
-        return reverse('blog:detail', kwargs={'pk': self.pk})
+        return reverse('blog:detail', kwargs={"pk": self.pk})
 
-    #def save(self, *args, **kwargs):
-    #    if not self.slug:
-    #        self.slug = slugify(self.title)
-    #    super(BlogPost, self).save(*args, **kwargs)
+    """def save(self, *args, **kwargs):
+        if not self.slug:
+            self.slug = slugify(self.title)
+        super(BlogPost, self).save(*args, **kwargs)"""
 
 
     def get_comment_count(self):
